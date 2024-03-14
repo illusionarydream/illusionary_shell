@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/quan/文档/c++_code/illusionary_shell/main.c" "CMakeFiles/SOURCES.dir/main.c.o" "gcc" "CMakeFiles/SOURCES.dir/main.c.o.d"
+  "/home/quan/文档/c++_code/illusionary_shell/main.c" "CMakeFiles/shell.dir/main.c.o" "gcc" "CMakeFiles/shell.dir/main.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

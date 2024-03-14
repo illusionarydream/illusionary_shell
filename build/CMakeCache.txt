@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=SOURCES
+CMAKE_PROJECT_NAME:STATIC=shell
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -216,22 +216,13 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/quan/文档/c++_code/illusionary_shell/build
+shell_BINARY_DIR:STATIC=/home/quan/文档/c++_code/illusionary_shell/build
 
 //Value Computed by CMake
-Project_IS_TOP_LEVEL:STATIC=ON
+shell_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/quan/文档/c++_code/illusionary_shell
-
-//Value Computed by CMake
-SOURCES_BINARY_DIR:STATIC=/home/quan/文档/c++_code/illusionary_shell/build
-
-//Value Computed by CMake
-SOURCES_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-SOURCES_SOURCE_DIR:STATIC=/home/quan/文档/c++_code/illusionary_shell
+shell_SOURCE_DIR:STATIC=/home/quan/文档/c++_code/illusionary_shell
 
 
 ########################

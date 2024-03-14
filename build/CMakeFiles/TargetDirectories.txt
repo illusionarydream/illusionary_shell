@@ -1,3 +1,3 @@
-/home/quan/文档/c++_code/illusionary_shell/build/CMakeFiles/SOURCES.dir
+/home/quan/文档/c++_code/illusionary_shell/build/CMakeFiles/shell.dir
 /home/quan/文档/c++_code/illusionary_shell/build/CMakeFiles/edit_cache.dir
 /home/quan/文档/c++_code/illusionary_shell/build/CMakeFiles/rebuild_cache.dir

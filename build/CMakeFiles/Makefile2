@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/quan/文档/c++_code/illusionary_shell/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SOURCES.dir/all
+all: CMakeFiles/shell.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SOURCES.dir/clean
+clean: CMakeFiles/shell.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SOURCES.dir
+# Target rules for target CMakeFiles/shell.dir
 
 # All Build rule for target.
-CMakeFiles/SOURCES.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOURCES.dir/build.make CMakeFiles/SOURCES.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOURCES.dir/build.make CMakeFiles/SOURCES.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/quan/文档/c++_code/illusionary_shell/build/CMakeFiles --progress-num=1,2 "Built target SOURCES"
-.PHONY : CMakeFiles/SOURCES.dir/all
+CMakeFiles/shell.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shell.dir/build.make CMakeFiles/shell.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shell.dir/build.make CMakeFiles/shell.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/quan/文档/c++_code/illusionary_shell/build/CMakeFiles --progress-num=1,2 "Built target shell"
+.PHONY : CMakeFiles/shell.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SOURCES.dir/rule: cmake_check_build_system
+CMakeFiles/shell.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/quan/文档/c++_code/illusionary_shell/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SOURCES.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/shell.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/quan/文档/c++_code/illusionary_shell/build/CMakeFiles 0
-.PHONY : CMakeFiles/SOURCES.dir/rule
+.PHONY : CMakeFiles/shell.dir/rule
 
 # Convenience name for target.
-SOURCES: CMakeFiles/SOURCES.dir/rule
-.PHONY : SOURCES
+shell: CMakeFiles/shell.dir/rule
+.PHONY : shell
 
 # clean rule for target.
-CMakeFiles/SOURCES.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOURCES.dir/build.make CMakeFiles/SOURCES.dir/clean
-.PHONY : CMakeFiles/SOURCES.dir/clean
+CMakeFiles/shell.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/shell.dir/build.make CMakeFiles/shell.dir/clean
+.PHONY : CMakeFiles/shell.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
