@@ -45,6 +45,17 @@ CMakeFiles/shell.dir/main.c.o: \
  /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
  /usr/include/asm/bitsperlong.h /usr/include/asm-generic/bitsperlong.h \
  /usr/include/asm/sockios.h /usr/include/asm-generic/sockios.h \
- /usr/include/bits/types/struct_osockaddr.h /usr/include/netinet/in.h \
- /usr/include/bits/stdint-uintn.h /usr/include/bits/in.h \
- /usr/include/arpa/inet.h
+ /usr/include/bits/types/struct_osockaddr.h /usr/include/sys/wait.h \
+ /usr/include/signal.h /usr/include/bits/signum-generic.h \
+ /usr/include/bits/signum-arch.h /usr/include/bits/types/sig_atomic_t.h \
+ /usr/include/bits/types/siginfo_t.h /usr/include/bits/types/__sigval_t.h \
+ /usr/include/bits/siginfo-arch.h /usr/include/bits/siginfo-consts.h \
+ /usr/include/bits/types/sigval_t.h /usr/include/bits/types/sigevent_t.h \
+ /usr/include/bits/sigevent-consts.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/types/stack_t.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigstack.h \
+ /usr/include/bits/sigstksz.h /usr/include/bits/ss_flags.h \
+ /usr/include/bits/types/struct_sigstack.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/signal_ext.h /usr/include/bits/types/idtype_t.h \
+ /usr/include/netinet/in.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/in.h /usr/include/arpa/inet.h
