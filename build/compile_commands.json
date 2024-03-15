@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/quan/文档/c++_code/illusionary_shell/build",
-  "command": "/usr/bin/clang -g -o CMakeFiles/shell.dir/main.c.o -c /home/quan/文档/c++_code/illusionary_shell/main.c",
-  "file": "/home/quan/文档/c++_code/illusionary_shell/main.c",
-  "output": "CMakeFiles/shell.dir/main.c.o"
-}
-]
