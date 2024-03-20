@@ -23,6 +23,27 @@ int parseLine(char *line, char *command_array[]) {
     return i;
 }
 
+void replace_home_with_tilde(char *str) {
+    const char *home = "home";
+    const char *tilde = "~";
+    char *pos = strstr(str, home);
+
+    if (pos) {
+        size_t len = strlen(str);
+        size_t home_len = strlen(home);
+        size_t tilde_len = strlen(tilde);
+
+        char *new_str = (char *)malloc(len - home_len + tilde_len + 1);
+        strncpy(new_str, str, pos - str);
+        new_str[pos - str] = '\0';
+
+        strcat(new_str, tilde);
+        strcat(new_str, pos + home_len);
+
+        strcpy(str, new_str);
+        free(new_str);
+    }
+}
 int execute_command(int client_socket, char *segment_array[], int n) {
     // *create many pipes
     int all_pipes[100][2];
@@ -141,6 +162,10 @@ int execute_command(int client_socket, char *segment_array[], int n) {
 
                 // *execute the command
                 if (execvp(command_array[0], command_array) == -1) {
+                    pipe(all_pipes[i]);
+                    close(all_pipes[i][0]);
+                    dup2(client_socket, STDOUT_FILENO);
+                    close(all_pipes[i][1]);
                     printf("Error: executing the command: %s\n", segment_array[i]);
                 }
                 exit(0);
@@ -172,6 +197,7 @@ void handle_line(int client_socket) {
         // *present the current directory
         char cwd[1024];
         getcwd(cwd, sizeof(cwd));
+        replace_home_with_tilde(cwd);  // change the directory to the home directory
         write(client_socket, cwd, strlen(cwd));
         write(client_socket, " $ ", 3);
 
