@@ -1,6 +1,5 @@
 CC=gcc
 CFLAGS=-I.
-DEPS = shell.h
 OBJ = shell.o 
 
 %.o: %.c $(DEPS)
@@ -12,4 +11,4 @@ shell: $(OBJ)
 .PHONY: clean
 
 clean:
-	rm -f $(OBJ) shell
+	rm -f $(OBJ)

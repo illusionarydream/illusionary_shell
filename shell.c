@@ -120,9 +120,9 @@ int execute_command(int client_socket, char *segment_array[], int n) {
         int command_length = parseLine(segment_array[i], command_array);
 
         // ?debug
-        for (int j = 0; j < command_length; j++) {
-            printf("Command %d: %s\n", j, command_array[j]);
-        }
+        // for (int j = 0; j < command_length; j++) {
+        //     printf("Command %d: %s\n", j, command_array[j]);
+        // }
 
         // *create a pipe
         pipe(all_pipes[i]);
@@ -190,6 +190,28 @@ int execute_command(int client_socket, char *segment_array[], int n) {
     return 1;
 }
 
+// *check if the string is legal
+int if_pipe_legal(const char *str) {
+    if (str == NULL || *str == '\0')
+        return 1;
+
+    int len = strlen(str);
+    int empty_between_two_pipes = 1;
+    for (int i = 0; i < len; i++) {
+        if (str[i] == '|') {
+            if (empty_between_two_pipes == 1)
+                return -1;
+            empty_between_two_pipes = 1;
+        } else if (str[i] != ' ') {
+            empty_between_two_pipes = 0;
+        }
+    }
+    if (empty_between_two_pipes == 1)
+        return -1;
+
+    return 1;
+}
+
 void handle_line(int client_socket) {
     // *read and write data
     char buffer[1024];
@@ -217,6 +239,12 @@ void handle_line(int client_socket) {
         int tmp_len = strlen(buffer);
         buffer[tmp_len - 1] = '\0';
         buffer[tmp_len - 2] = '\0';
+
+        // *check if the command is legal
+        if (if_pipe_legal(buffer) == -1) {
+            write(client_socket, "Error: illegal command\n", 24);
+            continue;
+        }
 
         // *split the command and the arguments
         char *segment_array[100];
